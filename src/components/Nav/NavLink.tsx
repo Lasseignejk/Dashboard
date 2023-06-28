@@ -1,0 +1,45 @@
+import { ReactNode } from "react";
+
+interface NavProps {
+	openNav: boolean;
+	setOpenNav: (bool: boolean) => void;
+	isSelected: string;
+	setIsSelected: (str: string) => void;
+}
+
+type Link = {
+	name: string,
+	icon: ReactNode
+}
+
+interface NavLinkProps extends NavProps {
+	link: Link
+	handleItemClick: (str:string) => void
+}
+
+const NavLink = ({
+	link,
+	openNav,
+	// setOpenNav,
+	isSelected,
+	// setIsSelected,
+	handleItemClick,
+}:NavLinkProps): JSX.Element => {
+	return (
+		<div
+			className={`text-white flex items-center rounded-l-full hover:cursor-pointer hover:font-bold gap-3 hover:bg-white hover:text-regalBlue ease-in duration-200 ${
+				isSelected === link.name ? "selected" : ""
+			} `}>
+			<span className="m-2 w-6 text-2xl">{link.icon}</span>
+			<p
+				className={`text-white  w-full flex items-center pl-4 gap-3 h-10 hover:text-regalBlue ${
+					isSelected === link.name ? "selected" : ""
+				} ${openNav ? "flex h-10" : "hidden"}`}
+				onClick={() => handleItemClick(link.name)}>
+				{link.name}
+			</p>
+		</div>
+	);
+};
+
+export default NavLink;
