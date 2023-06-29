@@ -1,18 +1,42 @@
+interface DataProps {
+
+}
+
+interface DataObjectProps {
+    icon: String;
+    rounded: Boolean;
+    smallText: String;
+    largeText: String;
+}
+
 export default data = [
     {metrics: [
-        {
-            title: "Daily Views", icon: "", metric: "1504"
-        },
-        {
-            title: "Sales", icon: "", metric: "80"
-        },
-        {
-            title: "Comments", icon: "", metric: "284"
-        },
-        {
-            title: "", icon: "", metric: "$7,842"
-        },
-    ]},
+		{
+			icon: <FaEye />,
+			rounded: false,
+			smallText: "Daily Views",
+			largeText: "1,504",
+		},
+		{
+			icon: <FaShoppingCart />,
+			rounded: false,
+			smallText: "Sales",
+			largeText: "80",
+		},
+		{
+			icon: <FaComments />,
+			rounded: false,
+			smallText: "Comments",
+			largeText: "284",
+		},
+		{
+			icon: <FaMoneyBill />,
+			rounded: false,
+			smallText: "Earning",
+			largeText: "$7,842",
+		},
+    ]
+},
     {orders: [
         {
          name: "Star Refrigerator", price: "$1200", payment: "paid", status: "Delivered"   
