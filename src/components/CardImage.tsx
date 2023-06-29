@@ -8,11 +8,11 @@ interface ImageProps {
 }
 
 const CardImage = ({imgSrc, altText, rounded, icon}:ImageProps):JSX.Element => {
-    const imgClasses = rounded ? "rounded-full h-10" : "rounded-lg h-10"
+    const imgClasses = rounded ? "rounded-full h-10 w-10 object-cover" : "rounded-lg h-10"
   return (
 		<>
 			{imgSrc && <img src={imgSrc} alt={altText} className={imgClasses} />}
-            {!imgSrc && <span className="text-4xl text-regal-blue">{icon}</span>}
+      {!imgSrc && <span className="text-4xl text-gray-400">{icon}</span>}
 		</>
   );
 }
