@@ -76,3 +76,43 @@ nav.active {
   font-weight: bold;
   font-size: 20px;
 }
+
+td[id^="status"] {
+  text-align: right;
+}
+
+td[id^="task"] {
+  text-align: left;
+}
+
+td[id="status-Completed"] span {
+  background-color: rgb(43, 238, 43);
+  color: white;
+  border-radius: 5px;
+  padding: 1px 3px;
+  font-weight: 600;
+}
+
+td[id="status-In Progress"] span {
+  background-color: rgb(59, 167, 255);
+  color: white;
+  border-radius: 5px;
+  padding: 1px 3px;
+  font-weight: 600;
+}
+
+td[id="status-Pending"] span {
+  background-color: rgb(238, 202, 43);
+  color: white;
+  border-radius: 5px;
+  padding: 1px 3px;
+  font-weight: 600;
+}
+
+td[id="status-Scheduled"] span {
+  background-color: rgb(218, 44, 241);
+  color: white;
+  border-radius: 5px;
+  padding: 1px 3px;
+  font-weight: 600;
+}

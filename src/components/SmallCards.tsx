@@ -46,6 +46,13 @@ const SmallCards = ({imgSrc, altText, rounded, largeText, smallText, icon, textM
 
 			{/* icon */}
 			{icon && !imgSrc && component !== "table" && <CardImage icon={icon} />}
+			{component == "table" && (
+				<div className="flex justify-between w-full py-2 border-b-2">
+					<p className="w-1/2">{task}</p>
+					<p className="w-1/4">{assignee}</p>
+					<p className={`px-1 rounded-md w-1/4 text-center text-white ${state == "In Progress" && "bg-blue-500"} ${state == "Pending" && "bg-yellow-500"} ${state == "Completed" && "bg-green-500"} ${state == "Scheduled" && "bg-purple-500"}`}>{state}</p>
+				</div>
+			)}
 		</div>
 	);
 };

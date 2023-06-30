@@ -1,6 +1,6 @@
 import NavLink from "./NavLink"
 import logo from "../../assets/logo.png"
-import {FaChartLine, FaCog, FaLock, FaQuestion, FaSignOutAlt, FaTextHeight, FaUsers} from "react-icons/fa"
+import {FaChartLine, FaCog, FaComments, FaLock, FaQuestion, FaSignOutAlt, FaUsers} from "react-icons/fa"
 
 interface NavProps {
 	openNav: boolean;
@@ -17,7 +17,7 @@ const Nav = ({openNav, setOpenNav, isSelected, setIsSelected}:NavProps):JSX.Elem
     const links = [
         {name: "Dashboard", icon: <FaChartLine />},
         {name: "Customers", icon: <FaUsers />},
-        {name: "Message", icon: <FaTextHeight/>},
+        {name: "Message", icon: <FaComments/>},
         {name: "Help", icon: <FaQuestion />},
         {name: "Settings", icon: <FaCog />},
         {name: "Password", icon: <FaLock />},
