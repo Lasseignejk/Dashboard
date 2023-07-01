@@ -29,7 +29,7 @@ const Nav = ({openNav, setOpenNav, isSelected, setIsSelected}:NavProps):JSX.Elem
 				openNav ? "active" : ""
 			}`}>
 			<div className="flex flex-col gap-5">
-				<div className="flex gap-5 pt-3 pl-1">
+				<div className="flex gap-5 py-3 pl-1">
 					<img src={logo} alt="" className="w-10" />
 					<h1
 						className={`text-white text-2xl ${

@@ -80,8 +80,14 @@ nav.active {
 td[id^="status"] {
   text-align: right;
 }
+th[id^="Status"] {
+  text-align: right;
+}
 
 td[id^="task"] {
+  text-align: left;
+}
+th[id^="Task"] {
   text-align: left;
 }
 

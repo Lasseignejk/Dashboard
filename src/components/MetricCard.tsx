@@ -53,7 +53,7 @@ interface SmallCardProps {
 const MetricCard = ({title, data, component}:MetricCardProps):JSX.Element => {
   const icons = [<FaEye/>, <FaShoppingCart />, <FaComments />, <FaMoneyBill />]
 
-  const cardClasses = "flex gap-5"
+  const cardClasses = "flex gap-5 w-full justify-evenly"
   const tableClasses = "flex flex-col w-2/3 shadow-lg rounded-2xl p-5";
   const sideClasses = "flex flex-col w-1/3 shadow-lg rounded-2xl p-5";
     
