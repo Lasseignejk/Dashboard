@@ -9,7 +9,7 @@ const Dashboard = ():JSX.Element => {
 			<SearchBar />
 			<MetricCard data={data[0].metrics} component={"cards"} />
 			<div className="flex w-full justify-around px-5 gap-5">
-				<Table data={data[2].tasks} title={"Recent Orders"} headers={["Task", "Asignee", "Status"]} />
+				<Table data={data[2].tasks} title={"Recent Tasks"} headers={["Task", "Asignee", "Status"]} />
 				{/* <MetricCard
 					data={data[2].tasks}
 					title={"Recent Orders"}
