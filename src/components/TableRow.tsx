@@ -6,7 +6,6 @@ interface TableRowProps {
 
 const TableRow = ({text, centered, column}:TableRowProps) => {
     let color = ""
-    console.log(column + "-" + text)
 
   return (
     <td id={column + "-" + text} className={`py-2 ${centered ? "text-center": ""} ${color}`}>

@@ -27,7 +27,7 @@ const SmallCards = ({imgSrc, altText, rounded, largeText, smallText, icon, textM
 
 	const containerClasses = title
 		? "flex items-center gap-3 p-2 smallCard duration-200 ease-in"
-		: "flex justify-between items-center shadow-lg p-5 rounded-2xl w-[180px] smallCard duration-200 ease-in";
+		: "flex justify-between items-center box_shadow p-5 rounded-2xl min-w-[180px] grow max-w-[210px] smallCard duration-200 ease-in";
 
 	return (
 		<div className={containerClasses}>

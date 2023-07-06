@@ -11,7 +11,7 @@ const Hamburger = ({openNav, setOpenNav}:HamburgerProps):JSX.Element => {
     }
   return (
 
-			<div className={`hamburger m-3 ${openNav ? 'active' : ''}`} onClick={handleToggle}> 
+			<div className={`hamburger m-3 left-[90px] top-3 ${openNav ? 'active' : ''}`} onClick={handleToggle}> 
 				<div className="line"></div>
 				<div className="line"></div>
 				<div className="line"></div>

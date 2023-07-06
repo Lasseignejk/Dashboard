@@ -53,9 +53,9 @@ interface SmallCardProps {
 const MetricCard = ({title, data, component}:MetricCardProps):JSX.Element => {
   const icons = [<FaEye/>, <FaShoppingCart />, <FaComments />, <FaMoneyBill />]
 
-  const cardClasses = "flex gap-5 w-full justify-evenly"
-  const tableClasses = "flex flex-col w-2/3 shadow-lg rounded-2xl p-5";
-  const sideClasses = "flex flex-col w-1/3 shadow-lg rounded-2xl p-5";
+  const cardClasses = "flex gap-5 w-full justify-evenly px-5"
+  const tableClasses = "flex flex-col w-2/3 box_shadow rounded-2xl p-5";
+  const sideClasses = "flex flex-col w-1/3 box_shadow rounded-2xl p-5";
     
   return (
 		<div className={`${component == "cards" && cardClasses} ${component == "table" && tableClasses} ${component == "side" && sideClasses}`}>

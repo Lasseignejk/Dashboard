@@ -5,6 +5,7 @@ export default {
 		extend: {
 			colors: {
 				regalBlue: "#FF6D00",
+				shadow: "rgba(0,0,0,0.1)"
 			},
 		},
 	},
