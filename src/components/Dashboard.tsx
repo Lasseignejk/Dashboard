@@ -2,20 +2,6 @@ import MetricCard from './MetricCard';
 import SearchBar from './SearchBar'
 import Table from './Table';
 
-interface DataProps {
-	metrics?: MetricsProps[];
-	users?: UsersProps[];
-	tasks?: TasksProps[];
-}
-
-interface MetricsProps {
-	icon: string;
-	rounded: boolean;
-	smallText: string;
-	largeText: string;
-	textMainColor: boolean;
-}
-
 interface UsersProps {
 	id: number;
 	name: string;
@@ -33,21 +19,35 @@ interface TasksProps {
 	assignee: number;
 }
 
-interface DashboardProps {
-	data: DataProps[],
-	setData: (item: object[]) => void
+interface MetricsProps {
+	icon: string;
+	rounded: boolean;
+	smallText: string;
+	largeText: string;
+	textMainColor: boolean;
 }
 
-const Dashboard = ({data, setData}:DashboardProps):JSX.Element => {
+interface DashboardProps {
+	// data: DataProps[],
+	// setData: (item: object[]) => void,
+	tasksData: TasksProps[],
+	setTasksData: (item: TasksProps[]) => void
+	usersData: UsersProps[],
+	setUsersData: (item: UsersProps[]) => void
+	metricsData: MetricsProps[],
+	setMetricsData: (item: MetricsProps[]) => void
+}
+
+const Dashboard = ({tasksData, setTasksData, usersData, setUsersData, metricsData, setMetricsData}:DashboardProps):JSX.Element => {
   return (
 		<div className="w-full flex items-center flex-col gap-4">
 			<SearchBar />
-			<MetricCard data={data[0].metrics} component={"cards"} />
+			<MetricCard data={metricsData} component={"cards"} />
 			<div className="flex w-full justify-around px-5 gap-5 h-full py-5">
-				<Table data={data[2].tasks} title={"Recent Tasks"} headers={["Task", "Asignee", "Status"]} />
+				<Table data={tasksData} title={"Recent Tasks"} headers={["Task", "Asignee", "Status"]} />
 				
 				<MetricCard
-					data={data[1].users}
+					data={usersData}
 					title={"Recent Customers"}
 					component={"side"}
 				/>

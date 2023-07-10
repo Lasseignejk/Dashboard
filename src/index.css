@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+.outline_button {
+  border: 1px solid #ff6d00;
+  padding: 1px 8px;
+  border-radius: 30px;
+  color: #ff6d00;
+  transition: all 0.2s ease-in-out;
+}
+
+.filled_button {
+  border: 1px solid #ff6d00;
+  padding: 1px 8px;
+  border-radius: 30px;
+  color: white;
+  background-color: #ff6d00;
+  transition: all 0.2s ease-in-out;
+}
+
+.filled_button:hover {
+  background-color: white;
+  color: #FF6D00;
+}
+
+.outline_button:hover {
+  background-color: #ff6d00;
+  color: white;
+}
+
+.modal_input {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 1px 15px;
+}
 
 .hamburger {
   display: block;

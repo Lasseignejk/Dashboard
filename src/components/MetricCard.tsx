@@ -29,8 +29,8 @@ interface TasksProps {
 
 interface MetricCardProps {
 	title?: string;
-  component?: string;
-	data: (MetricsProps | UsersProps | TasksProps)[] | undefined;
+  	component?: string;
+	data: object[] | undefined;
 }
 
 interface SmallCardProps {
@@ -43,11 +43,11 @@ interface SmallCardProps {
 	textMainColor?: boolean;
 	name?: string;
 	country?: string;
-  task?: string;
-  state?: string;
-  assignee?: number;
-  id?: number
-  component?: string;
+	task?: string;
+	state?: string;
+	assignee?: number;
+	id?: number
+	component?: string;
 }
 
 const MetricCard = ({title, data, component}:MetricCardProps):JSX.Element => {

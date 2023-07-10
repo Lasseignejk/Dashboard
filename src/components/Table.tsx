@@ -29,7 +29,7 @@ interface TasksProps {
 interface TableProps {
 	title: string;
     headers?: string[];
-	data: TasksProps[] | undefined;
+	data: TasksProps[];
 }
 
 const Table = ({data, title, headers}:TableProps):JSX.Element => {
