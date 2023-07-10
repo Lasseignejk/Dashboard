@@ -12,6 +12,7 @@ import Hamburger from "./components/Nav/Hamburger";
 import { tasks, metrics, users } from './data/data';
 import ProfilePic from './components/ProfilePic';
 import Modal from './components/Modal';
+import Button from './components/Button';
 
 
 interface TasksProps {
@@ -83,7 +84,8 @@ function App():JSX.Element {
 		<div className="flex min-h-screen">
 			<Modal modal={modal} closeModal={closeModal} setTaskFormData={setTaskFormData} handleSubmit={handleSubmit} taskForm={taskForm}/>
 
-			<button className='absolute top-5 left-[220px] outline_button' onClick={openModal}>Add Task</button>
+			<Button text={"Add Task"} outline={true} styling={"taskBtn"} functionName={openModal}/>
+
 			<ProfilePic profilePic={profilePic} setProfilePic={setProfilePic} />
 			<div className="flex">
 				<Nav

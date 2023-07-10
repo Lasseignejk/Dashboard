@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 interface TaskFormProps {
 	task: string,
 	description: string,
@@ -17,7 +19,7 @@ const Modal = ({modal, closeModal, setTaskFormData, handleSubmit, taskForm}:Moda
   return (
 		<dialog
 			open={modal}
-			className="p-0 z-10 bg-transparentGray h-screen w-screen">
+			className="p-0 z-10 m-0 bg-transparentGray h-[100%] w-[100%]">
 			<div className="mt-10 rounded-2xl bg-white w-[300px] h-[250px] m-auto">
 				<div className="flex flex-col gap-3 p-5">
 					<input
@@ -65,12 +67,10 @@ const Modal = ({modal, closeModal, setTaskFormData, handleSubmit, taskForm}:Moda
 					/>
 				</div>
 				<div className="flex gap-4 justify-center">
-					<button onClick={handleSubmit} className="filled_button">
-						Create
-					</button>
-					<button className="outline_button" onClick={closeModal}>
-						Close
-					</button>
+
+					<Button text={"Create"} outline={false} functionName={handleSubmit}/>
+					
+					<Button text={"Close"} outline={true} functionName={closeModal}/>
 				</div>
 			</div>
 		</dialog>

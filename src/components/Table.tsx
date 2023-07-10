@@ -1,5 +1,6 @@
 import React from 'react'
 import TableRow from './TableRow';
+import Button from './Button';
 
 interface MetricsProps {
 	icon: string;
@@ -37,10 +38,7 @@ const Table = ({data, title, headers}:TableProps):JSX.Element => {
 		<div className="flex flex-col w-2/3 box_shadow rounded-2xl p-5">
 			<div className="flex justify-between items-start">
 				<h1 className="subHeader pb-5">{title}</h1>
-				<button
-					className={`bg-regalBlue border-[1px] border-regalBlue px-2 text-white text-sm mt-1 rounded-md hover:cursor-pointer hover:bg-white hover:border-[1px] hover:border-regalBlue hover:text-regalBlue duration-200 ease-in box-border`}>
-					View All
-				</button>
+				<Button text={"View All"} outline={false} styling={"text-sm"} />
 			</div>
 			<table>
 				<thead>

@@ -5,7 +5,7 @@ interface ProfilePicProps {
 
 const ProfilePic = ({profilePic, setProfilePic}:ProfilePicProps):JSX.Element => {
   return (
-    <div className="absolute top-4 right-4">
+    <div className="absolute top-4 right-4 hover:cursor-pointer">
         <img src={profilePic} alt="" className={`w-10 h-10 rounded-full`} />
     </div>
   )
