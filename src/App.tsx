@@ -82,7 +82,7 @@ function App():JSX.Element {
 
   return (
 		<div className="flex min-h-screen">
-			<Modal modal={modal} closeModal={closeModal} setTaskFormData={setTaskFormData} handleSubmit={handleSubmit} taskForm={taskForm}/>
+			<Modal modal={modal} closeModal={closeModal} setTaskFormData={setTaskFormData} handleSubmit={handleSubmit} taskForm={taskForm} setTaskForm={setTaskForm}/>
 
 			<Button text={"Add Task"} outline={true} styling={"taskBtn"} functionName={openModal}/>
 
