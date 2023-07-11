@@ -27,7 +27,7 @@ const NavLink = ({
 }:NavLinkProps): JSX.Element => {
 	return (
 		<div
-			className={`text-white flex items-center rounded-l-full hover:cursor-pointer hover:font-bold gap-3 hover:bg-white hover:text-regalBlue ease-in duration-200 ${
+			className={`text-white flex relative items-center rounded-l-full hover:cursor-pointer hover:font-bold gap-3 nav_link duration-200 transition ease-in ${
 				isSelected === link.name ? "selected" : ""
 			} `}
 			onClick={() => handleItemClick(link.name)}>

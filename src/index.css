@@ -77,10 +77,64 @@ nav.active {
     width: 20rem;
 }
 
+.nav_link:hover {
+  background-color: white;
+  color: #FF6D00;
+  transition: color 0.3s ease-in;
+}
+
+.nav_link:hover:before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  border-bottom-right-radius: 50%;
+  box-shadow: 0 20px 0 0 white;
+}
+
+.nav_link:hover:after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  border-top-right-radius: 50%;
+  box-shadow: 20px 0px 0 0 white;
+}
+
+
+
+
 .selected {
   color: #FF6D00;
   background-color: white;
   font-weight: bold;
+  position: relative;
+}
+
+.selected:before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  border-bottom-right-radius: 50%;
+  box-shadow: 0 20px 0 0 white;
+}
+
+.selected:after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  border-top-right-radius: 50%;
+  box-shadow: 20px 0px 0 0 white;
 }
 
 .hamburger.active {
